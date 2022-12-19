@@ -4,8 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Merry Christmas</title>
     <head>
-        <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+        <script src="./PureSnow.js"></script>
+        <!-- <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script> -->
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+            * {
+                font-family: "Gowun Dodum", sans-serif;
+            }
+
             body {
                 background-color: #860108;
             }
@@ -28,11 +34,13 @@
             }
 
             .letter-close {
+                padding-top: 100px;
                 display: block;
             }
 
             .letter-open {
                 display: none;
+                padding-top: 100px;
             }
 
             h1 {
@@ -99,6 +107,15 @@
                     margin: 150px auto 0px auto;
                 }
             }
+
+            .snowflake {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background: linear-gradient(white, white);
+                border-radius: 50%;
+                filter: drop-shadow(0 0 10px white)
+            }
         </style>
         <script>
             function open_letter() {
@@ -112,6 +129,7 @@
         </script>
     </head>
     <body>
+        <div id="snow"></div>
         <div class="letter-close">
             <div class="envelope" onclick="open_letter()"></div>
             <h3 class="envelope-msg">Click the Tree to Open Your Christmas!</h3>
@@ -126,7 +144,6 @@
                 gkgkgkgg</br>
                 gkgkgkgg</br>
                 gkgkgkgg</br>
-                <!-- 편지 내용 -->
                 <p class="from">From.</p>
             </div>
         </div>
